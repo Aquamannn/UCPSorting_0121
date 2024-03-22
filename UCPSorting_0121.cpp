@@ -41,7 +41,7 @@ void input() {
 void SelectionSort() {
     int i, j, sin_idx;
 
-    for (int i = 0; i <= n - 1; i++) {
+    for (i = 0; i < n - 1; i++) {
 
         sin_idx = i;
 
@@ -55,7 +55,6 @@ void SelectionSort() {
         swap(razzin[sin_idx],razzin[i]);
     }
 
-
 }
 
 void display() {
@@ -63,7 +62,7 @@ void display() {
     cout << "=================================" << endl;
     cout << "Elemen Array yang telah tersusun" << endl;
     cout << "=================================" << endl;
-    for (int j = 0; j < n; i++) {
+    for (int j = 0; j < n; j++) {
         cout << razzin[j] << endl; // Output each array element on a new  line
     }
     cout << "Jumlah pass =" << n - 1 << endl; // corectly shows the total number of elements
@@ -77,3 +76,4 @@ int main() {
     system("pause");
 
     return 0;
+}

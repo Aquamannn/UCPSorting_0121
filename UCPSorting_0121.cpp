@@ -31,11 +31,49 @@ void input() {
     cout << "Masukan Elemen Array" << endl;
     cout << "=====================" << endl;
 
-    for (int)
+    for (int i = 0; i < n; i++) {
+        cout << "Data ke-" << (i + 1) << ": ";
+        cin >> razzin[i];
+    }
 
 }
-int main()
-{
-    
+
+void SelectionSort() {
+    int i, j, sin_idx;
+
+    for (int i = 0; i <= n - 1; i++) {
+
+        sin_idx = i;
+
+        for (j = 1 + 1; j < n; j++) {
+            if (razzin[j] < razzin[sin_idx])
+
+            sin_idx = j;
+          
+
+        }
+        swap(razzin[sin_idx],razzin[i]);
+    }
+
+
 }
 
+void display() {
+    cout << endl;
+    cout << "=================================" << endl;
+    cout << "Elemen Array yang telah tersusun" << endl;
+    cout << "=================================" << endl;
+    for (int j = 0; j < n; i++) {
+        cout << razzin[j] << endl; // Output each array element on a new  line
+    }
+    cout << "Jumlah pass =" << n - 1 << endl; // corectly shows the total number of elements
+}
+
+int main() {
+
+    input();
+    SelectionSort();
+    display();
+    system("pause");
+
+    return 0;
